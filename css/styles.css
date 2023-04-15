@@ -193,6 +193,29 @@ nav ul li a.active {
   width: 100%;
 }
 
+.tech-stack {
+  background: #0a0b19;
+  padding: 20px 0px;
+  color: white;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  display: none;
+}
+
+.tech-stack__title h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.tech-stack__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
 .testimonial {
   background: #131422;
   color: white;
@@ -338,6 +361,11 @@ nav ul li a.active {
 .testimonial__video video {
   max-width: 100%;
   height: 400px;
+}
+
+.testimonial__block.two .testimonial__video video {
+  height: auto;
+  margin-top: 10px;
 }
 
 .services {
@@ -641,6 +669,11 @@ nav ul li a.active {
 
   .testimonial__video video {
     height: 250px;
+  }
+
+  .testimonial__block.two .testimonial__video video {
+    height: 250px;
+    margin-top: 0;
   }
 
   .services__blocks {
