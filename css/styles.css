@@ -37,6 +37,7 @@ p {
 .header__logo a {
   color: white;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .header__nav-desktop {
@@ -136,7 +137,7 @@ nav ul li a.active {
 }
 
 .hero2__text {
-  padding-top: 70px;
+  padding-top: 20px;
 }
 
 .hero2__text h1 {
@@ -579,6 +580,10 @@ nav ul li a.active {
 }
 
 @media only screen and (min-width: 768px) {
+  .header__logo a {
+    font-size: 24px;
+  }
+
   .container {
     max-width: 720px;
   }
