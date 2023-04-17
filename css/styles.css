@@ -1019,6 +1019,21 @@ nav ul li a.active {
     opacity: 0.6;
   }
 
+  /* To animate in Desktop view */
+  .tech-stack__icon-divs {
+    column-gap: 70px;
+  }
+
+  .tech-stack__icon-divs::before,
+  .tech-stack__icon-divs::after {
+    display: block;
+  }
+
+  .tech-stack__icons {
+    column-gap: 70px;
+    animation: 50s slide infinite linear;
+  }
+
   .services__blocks {
     gap: 30px;
   }
