@@ -1032,6 +1032,7 @@ nav ul li a.active {
   .tech-stack__icons {
     column-gap: 70px;
     animation: 50s slide infinite linear;
+    /* animation: none; */
   }
 
   .services__blocks {
