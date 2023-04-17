@@ -40,3 +40,9 @@ for (let i = 0; i < mobileMenuItems.length; i++) {
     e.target.classList.add("active");
   });
 }
+
+// Duplicate logo list on the Tech Stack Section if the screen size is less than 1200px
+if (window.innerWidth < 1200) {
+  let copy = document.querySelector(".tech-stack__icons").cloneNode(true);
+  document.querySelector(".tech-stack__icon-divs").appendChild(copy);
+}

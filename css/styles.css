@@ -220,12 +220,55 @@ nav ul li a.active {
   font-size: 20px;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.tech-stack__icon-divs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-stack__icon-divs::before,
+.tech-stack__icon-divs::after {
+  position: absolute;
+  top: 0;
+  width: 75px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.tech-stack__icon-divs::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #0a0b19);
+}
+
+.tech-stack__icon-divs::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #0a0b19);
+}
+
 .tech-stack__icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  column-gap: 10px;
-  opacity: 0.6;
+  column-gap: 25px;
+  opacity: 0.7;
+  animation: 30s slide infinite linear;
+}
+
+.tech-stack__icon-divs:hover .tech-stack__icons {
+  animation-play-state: paused;
 }
 
 .tech-stack__icon {
@@ -233,6 +276,8 @@ nav ul li a.active {
   height: auto;
   display: flex;
   justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .tech-stack__icon.css .tech-stack__img-container,
@@ -242,6 +287,10 @@ nav ul li a.active {
 
 .tech-stack__icon.shopify .tech-stack__img-container {
   width: 45px;
+}
+
+.tech-stack__icon.figma .tech-stack__img-container {
+  width: 32px;
 }
 
 .tech-stack__icon img  {
@@ -957,6 +1006,17 @@ nav ul li a.active {
 
   .hero2__img img {
     width: 80%;
+  }
+
+  .tech-stack__icon-divs::before,
+  .tech-stack__icon-divs::after {
+    display: none;
+  }
+
+  .tech-stack__icons {
+    column-gap: 45px;
+    animation: none;
+    opacity: 0.6;
   }
 
   .services__blocks {
