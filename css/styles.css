@@ -7,6 +7,15 @@ p {
   display: none;
 }
 
+/* Button Hover Effect */
+.btn-arrow {
+  transition: all .5s ease-in-out;
+}
+
+.btn:hover .btn-arrow {
+  margin-left: 10px;
+}
+
 .header {
   background: #0d0e1e;
   /* background: black; */
@@ -166,7 +175,7 @@ nav ul li a.active {
   line-height: 30px;
 }
 
-.hero2__text span {
+.hero2__text .hero2__text-highlight {
   color: rgb(35, 217, 151);
 }
 
