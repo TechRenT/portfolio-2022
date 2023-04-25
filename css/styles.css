@@ -344,7 +344,7 @@ nav ul li a.active {
 
 .testimonial__block {
   background: #0a0b19;
-  padding: 30px 20px;
+  padding: 40px 20px;
   border-radius: 15px;
   margin-bottom: 30px;
   border-bottom: 1px solid transparent;
@@ -755,6 +755,8 @@ nav ul li a.active {
 
   .testimonial__block {
     width: 49%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .testimonial__block.one {
@@ -970,6 +972,11 @@ nav ul li a.active {
     padding: 0px;
   }
 
+  .testimonial__block {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
   .testimonial__video video {
     height: 350px;
   }
@@ -1073,6 +1080,22 @@ nav ul li a.active {
   }
 
   /* Testimonial Section */
+  .testimonial__block {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .testimonial__block.three .testimonial__art {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .testimonial__block.video {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
   .testimonial__video video {
     height: 400px;
   }
