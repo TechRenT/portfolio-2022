@@ -444,7 +444,11 @@ nav ul li a.active {
   height: 400px;
 }
 
-.testimonial__block.two .testimonial__video video {
+.testimonial__block.three {
+  width: 100%;
+}
+
+.testimonial__block.three .testimonial__video video {
   height: auto;
   margin-top: 10px;
 }
@@ -705,6 +709,10 @@ nav ul li a.active {
     width: 75%;
   }
 
+  .hero2 {
+    padding-bottom: 80px;
+  }
+
   .hero2 .container {
     display: flex;
   }
@@ -731,9 +739,15 @@ nav ul li a.active {
     column-gap: 30px;
   }
 
+  .testimonial {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
   .testimonial__blocks {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .testimonial__block {
@@ -748,21 +762,30 @@ nav ul li a.active {
     margin-left: 1%
   }
 
-  .testimonial__block.three {
+  /* .testimonial__block.three {
     margin-right: 1%
-  }
+  } */
 
-  .testimonial__block.four {
+  /* .testimonial__block.four {
     margin-left: 1%
-  }
+  } */
 
   .testimonial__video video {
-    height: 250px;
+    height: 300px;
   }
 
-  .testimonial__block.two .testimonial__video video {
+  .testimonial__block.three .testimonial__video video {
+    width: 85%;
+  }
+
+  /* .testimonial__block.two .testimonial__video video {
     height: 250px;
     margin-top: 0;
+  } */
+
+  .services {
+    padding-top: 90px;
+    padding-bottom: 50px;
   }
 
   .services__blocks {
@@ -772,6 +795,10 @@ nav ul li a.active {
 
   .services__block {
     width: 33.33%;
+  }
+
+  .footer {
+    padding-top: 80px;
   }
 
   .footer__main {
@@ -885,7 +912,7 @@ nav ul li a.active {
   }
 
   .hero2 {
-    padding: 40px 0px;
+    padding: 40px 0px 80px 0px;
   }
 
   .hero2__text {
@@ -934,10 +961,17 @@ nav ul li a.active {
     transform: scale(1.03);
   }
 
+  /* Testimonial Section */
+
   .testimonial__main {
     padding: 0px;
   }
 
+  .testimonial__video video {
+    height: 350px;
+  }
+
+  /* Services Section */
   .services__main {
     padding: 0px;
   }
@@ -1033,6 +1067,15 @@ nav ul li a.active {
     column-gap: 70px;
     animation: 50s slide infinite linear;
     /* animation: none; */
+  }
+
+  /* Testimonial Section */
+  .testimonial__video video {
+    height: 400px;
+  }
+
+  .testimonial__block.three .testimonial__video video {
+    width: 75%;
   }
 
   .services__blocks {
