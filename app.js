@@ -15,37 +15,80 @@ closeMenu.addEventListener('click', () => {
     openMenu.classList.remove('hide');
 });
 
-// Set active class on Desktop menu items
+// Smooth scroll function
+function smoothScroll(target, duration) {
+  const targetElement = document.querySelector(target);
+  const targetPosition = targetElement.offsetTop - 70; // Subtract header height
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  // Easing function
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+// Handle desktop menu clicks
 const desktopMenuItems = document.querySelectorAll('.header__nav-desktop li a');
-console.log(desktopMenuItems);
 
-for (let i = 0; i < desktopMenuItems.length; i++) {
-  desktopMenuItems[i].addEventListener("click", function(e) {
-    let current = document.querySelectorAll(".header__nav-desktop li a.active");
-    console.log(current);
-    current[0].classList.remove("active");
-    e.target.classList.add("active");
+desktopMenuItems.forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Remove active class from all items and add to clicked item
+    desktopMenuItems.forEach(link => link.classList.remove('active'));
+    this.classList.add('active');
+    
+    // Get the target section from href
+    const targetSection = this.getAttribute('href');
+    if (targetSection !== '/') {
+      smoothScroll(targetSection, 1000);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
-}
+});
 
-// Set active class on Mobile menu items
+// Handle mobile menu clicks
 const mobileMenuItems = document.querySelectorAll('.header__nav-mobile li a');
-console.log(mobileMenuItems);
 
-for (let i = 0; i < mobileMenuItems.length; i++) {
-  mobileMenuItems[i].addEventListener("click", function(e) {
-    let current = document.querySelectorAll(".header__nav-mobile li a.active");
-    console.log(current);
-    current[0].classList.remove("active");
-    e.target.classList.add("active");
+mobileMenuItems.forEach(item => {
+  item.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Remove active class from all items and add to clicked item
+    mobileMenuItems.forEach(link => link.classList.remove('active'));
+    this.classList.add('active');
+    
+    // Get the target section from href
+    const targetSection = this.getAttribute('href');
+    if (targetSection !== '/') {
+      // Close mobile menu
+      mobileMenu.classList.add('hide');
+      closeMenu.classList.add('hide');
+      openMenu.classList.remove('hide');
+      
+      // Scroll to section
+      smoothScroll(targetSection, 1000);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
-}
-
-// Duplicate logo list on the Tech Stack Section if the screen size is less than 1200px
-// if (window.innerWidth < 1200) {
-//   let copy = document.querySelector(".tech-stack__icons").cloneNode(true);
-//   document.querySelector(".tech-stack__icon-divs").appendChild(copy);
-// }
+});
 
 // To apply animate from mobile to desktop
 let copy = document.querySelector(".tech-stack__icons").cloneNode(true);

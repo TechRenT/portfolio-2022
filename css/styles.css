@@ -301,7 +301,7 @@ nav ul li a.active {
 
 /* Portfolio Section */
 .portfolio {
-  background: #131422;
+  background: #131422;  /* dark */
   color: white;
   padding: 40px 0px;
 }
@@ -483,8 +483,9 @@ nav ul li a.active {
   }
 }
 
+/* Testimonial Section */
 .testimonial {
-  background: #131422;
+  background: #0a0b19;  /* darker */
   color: white;
   padding: 40px 0px;
 }
@@ -527,7 +528,7 @@ nav ul li a.active {
 }
 
 .testimonial__block {
-  background: #0a0b19;
+  background: #131422;
   padding: 40px 20px;
   border-radius: 15px;
   margin-bottom: 30px;
@@ -640,8 +641,9 @@ nav ul li a.active {
   margin-top: 10px;
 }
 
+/* Services Section */
 .services {
-  background: #0a0b19;
+  background: #131422;  /* dark */
   color: white;
   padding: 40px 0px;
 }
@@ -684,7 +686,7 @@ nav ul li a.active {
 }
 
 .services__block {
-  background: #131422;
+  background: #0a0b19;
   padding: 30px 20px;
   border-radius: 15px;
   margin-bottom: 30px;
