@@ -150,9 +150,9 @@ nav ul li a.active {
 }
 
 .hero2__text h1 {
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 300;
-  padding: 30px 50px 20px 10px;
+  padding: 30px 10px 20px 10px;
   line-height: 55px;
   position: relative;
 }
@@ -465,22 +465,6 @@ nav ul li a.active {
   color: #666;
   font-size: 14px;
   line-height: 1.5;
-}
-
-@media only screen and (min-width: 768px) {
-  .portfolio__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .portfolio__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .portfolio {
-    padding: 80px 0;
-  }
 }
 
 /* Testimonial Section */
@@ -824,6 +808,12 @@ nav ul li a.active {
   margin-bottom: 20px;
 }
 
+@media only screen and (min-width: 390px) {
+  .hero2__text h1 {
+    font-size: 40px;
+  }
+}
+
 @media only screen and (min-width: 576px) {
   .hero__right img {
     width: 60%;
@@ -914,6 +904,7 @@ nav ul li a.active {
   .hero2__text h1 {
     font-size: 30px;
     line-height: 40px;
+    max-width: 390px;
   }
 
   .hero2__text p {
@@ -926,6 +917,10 @@ nav ul li a.active {
 
   .tech-stack__icons {
     column-gap: 30px;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .testimonial {
@@ -1114,7 +1109,7 @@ nav ul li a.active {
   }
 
   .hero2__text h1 {
-    max-width: 470px;
+    max-width: 450px;
     font-size: 35px;
     padding-left: 0px;
     line-height: 50px;
@@ -1150,6 +1145,16 @@ nav ul li a.active {
 
   .hero2__img img:hover {
     transform: scale(1.03);
+  }
+
+  /* Portfolio Section */
+
+  .portfolio__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .portfolio {
+    padding: 80px 0;
   }
 
   /* Testimonial Section */
@@ -1225,7 +1230,7 @@ nav ul li a.active {
 
   .hero2__text h1 {
     font-size: 42px;
-    max-width: 550px;
+    max-width: 545px;
     line-height: 60px;
   }
 
